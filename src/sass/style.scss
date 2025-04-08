@@ -1,6 +1,15 @@
+@use 'header';
+@use 'introduction';
+@use 'buttons';
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Space Grotesk", sans-serif;
+}
+
+section img,
+main img {
+    width: 50px;
 }
