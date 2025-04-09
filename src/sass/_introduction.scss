@@ -8,7 +8,7 @@
     height: calc(100vh - 70px);
 
     .container-introduction {
-        width: 365px;
+        width: 340px;
         height: 100%;
         padding-block: 20px;
         position: relative;
@@ -20,7 +20,7 @@
             height: 100%;
             
             h1 {
-                @include mixins.title(43);
+                @include mixins.title(40);
             }
 
             .content-txt {
@@ -30,6 +30,7 @@
 
                 p {
                     @include mixins.p;
+                    font-size: 15px;
                 }
             }
         }
