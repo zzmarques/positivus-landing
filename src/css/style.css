@@ -105,6 +105,48 @@ header .btn-menu span {
   bottom: 0;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+}
+.main-content .sec {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 340px;
+}
+.main-content .sec .sec-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+.main-content .sec .sec-header .container-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-content .sec .sec-header h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #000000;
+  padding-inline: 10px;
+  background-color: #B9FF66;
+  border-radius: 7px;
+}
+.main-content .sec .sec-header p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  font-size: 14px;
+}
+
 .btn-intro {
   width: 100%;
   height: 68px;
