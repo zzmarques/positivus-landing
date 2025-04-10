@@ -146,6 +146,134 @@ header .btn-menu span {
   color: #000000;
   font-size: 14px;
 }
+.main-content .sec .services-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+.main-content .sec .services-cards .card-serv {
+  width: 100%;
+  height: 340px;
+  padding: 50px;
+  border-radius: 45px;
+  background-color: #F3F3F3;
+  box-shadow: 0 7px 0 #191A23;
+  border: 1px solid #191A23;
+}
+.main-content .sec .services-cards .card-serv .content-card-serv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.main-content .sec .services-cards .card-serv .content-card-serv .container-card-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-content .sec .services-cards .card-serv .content-card-serv .container-card-txt h3 {
+  font-size: 25px;
+  font-weight: 500;
+  color: #000000;
+  padding-inline: 10px;
+  background-color: #B9FF66;
+  border-radius: 7px;
+}
+.main-content .sec .services-cards .card-serv .content-card-serv .container-card-txt .ts {
+  width: 177px;
+}
+.main-content .sec .services-cards .card-serv .content-card-serv .container-card-txt a {
+  text-decoration: none;
+}
+.main-content .sec .services-cards .card-serv .content-card-serv .container-card-txt a .ic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: #191A23;
+  color: #B9FF66;
+}
+.main-content .sec .services-cards .card-serv .content-card-serv .container-card-txt a .txt {
+  display: none;
+}
+.main-content .sec .services-cards .card-serv .content-card-serv .container-img-card {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  width: 150px;
+}
+.main-content .sec .services-cards .card-serv .content-card-serv .container-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-content .sec .services-cards .gre {
+  width: 100%;
+  height: 340px;
+  padding: 50px;
+  border-radius: 45px;
+  background-color: #B9FF66;
+  box-shadow: 0 7px 0 #191A23;
+  border: 1px solid #191A23;
+}
+.main-content .sec .services-cards .gre .content-card-serv .container-card-txt h3 {
+  background-color: #FFFFFF;
+}
+.main-content .sec .services-cards .gre .content-card-serv .container-card-txt .ts {
+  width: 162px;
+}
+.main-content .sec .services-cards .dark {
+  width: 100%;
+  height: 340px;
+  padding: 50px;
+  border-radius: 45px;
+  background-color: #191A23;
+  box-shadow: 0 7px 0 #191A23;
+  border: 1px solid #191A23;
+}
+.main-content .sec .services-cards .dark .content-card-serv .container-card-txt h3 {
+  background-color: #FFFFFF;
+}
+.main-content .sec .services-cards .dark .content-card-serv .container-card-txt .ts {
+  width: 146px;
+}
+.main-content .sec .services-cards .dark .content-card-serv .container-card-txt a .ic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #191A23;
+}
+.main-content .sec .services-cards .dark .content-card-serv .card-3 {
+  bottom: 0px;
+}
+.main-content .sec .services-cards .card-4 .content-card-serv .container-card-txt h3 {
+  width: 85px;
+}
+.main-content .sec .services-cards .card-4 .content-card-serv .container-card-txt .ts {
+  width: 146px;
+}
+.main-content .sec .services-cards .card-4 .content-card-serv .container-img-card {
+  bottom: 10px;
+}
+.main-content .sec .services-cards .card-5 .content-card-serv .container-img-card {
+  bottom: 5px;
+}
+.main-content .sec .services-cards .card-6 .content-card-serv .container-card-txt h3 {
+  width: 186px;
+}
+.main-content .sec .services-cards .card-6 .content-card-serv .container-card-txt .ts {
+  width: 120px;
+}
 
 .btn-intro {
   width: 100%;

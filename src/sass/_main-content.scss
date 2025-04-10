@@ -41,5 +41,155 @@
             }
         }
 
+        .services-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+
+            .card-serv {
+                @include mixins.card-serv(variables.$gray);
+
+
+                .content-card-serv {
+                    @include mixins.alinhar-b;
+                    flex-direction: row;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    .container-card-txt {
+                        @include mixins.alinhar-b;
+
+                        h3 {
+                            @include mixins.title(25);
+                            padding-inline: 10px;
+                            background-color: variables.$green;
+                            border-radius: 7px;
+                        }
+
+                        .ts {
+                            width: 177px;
+                        }
+                        
+                        a {
+                            text-decoration: none;
+
+                            .ic {
+                                @include mixins.arrow(variables.$dark, variables.$green);
+                            }
+
+                            .txt {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .container-img-card {
+                        position: absolute;
+                        right: 0;
+                        bottom: 20px;
+                        width: 150px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                }
+            }
+
+            .gre {
+                @include mixins.card-serv(variables.$green);
+
+                .content-card-serv {
+
+                    .container-card-txt {
+
+                        h3 {
+                            background-color: variables.$white;
+                        }
+
+                        .ts {
+                            width: 162px;
+                        }
+                    }
+                }
+            }
+
+            .dark {
+                @include mixins.card-serv(variables.$dark);
+
+                .content-card-serv {
+
+                    .container-card-txt {
+
+                        h3 {
+                            background-color: variables.$white;
+                        }
+
+                        .ts {
+                            width: 146px;
+                        }
+
+                        a {
+                            .ic {
+                                @include mixins.arrow(variables.$white, variables.$dark);
+                            }
+                        }
+                    }
+
+                    .card-3 {
+                        bottom: 0px;
+                    }
+                }
+            }
+
+            .card-4 {
+                .content-card-serv {
+                
+                    .container-card-txt {
+                        h3 {
+                            width: 85px;
+                        }
+
+                        .ts {
+                            width: 146px;
+                        }
+                    }
+
+                    .container-img-card {
+                        bottom: 10px;
+                    }
+                }
+            }
+
+            .card-5 {
+                .content-card-serv {
+
+                    .container-img-card {
+                        bottom: 5px;
+                    }
+                }
+            }
+
+            .card-6 {
+                .content-card-serv {
+                
+                    .container-card-txt {
+                        h3 {
+                            width: 186px;
+                        }
+
+                        .ts {
+                            width: 120px;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
