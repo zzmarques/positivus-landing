@@ -191,5 +191,31 @@
             }
         }
 
+        .cta {
+            @include mixins.card-serv(variables.$gray);
+            border: 0;
+            box-shadow: none;
+
+            .cta-txt {
+                @include mixins.alinhar-b;
+                height: 100%;
+                text-align: left;
+
+                h3 {
+                    @include mixins.title(26)
+                }
+
+                p {
+                    @include mixins.p;
+                    font-size: 15px;
+                    line-height: 19px;
+                }
+            }
+
+            figure {
+                display: none;
+            }
+        }
+
     }
 }

@@ -13,3 +13,9 @@
     line-height: 28px;
     color: variables.$white;
 }
+
+.btn-cta {
+    @extend .btn-intro;
+    height: 58px;
+    font-size: 15px;
+}
