@@ -192,7 +192,7 @@
         }
 
         .cta {
-            @include mixins.card-serv(variables.$gray);
+            @include mixins.card(variables.$gray);
             border: 0;
             box-shadow: none;
 
@@ -217,5 +217,55 @@
             }
         }
 
+        
+    }
+
+    .case {
+        position: relative;
+        height: 500px;
+
+        .content-case {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 95vw;
+            overflow: hidden;
+
+            .conatiner-cards-cases {
+                display: flex;
+                gap: 10px;
+                overflow: scroll;
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+                
+                .card-case {
+                    @include mixins.alinhar-b;
+                    @include mixins.card(variables.$dark);
+                    flex-shrink: 0;
+                    width: 310px;
+                    height: 280px;                    
+    
+                    p {
+                        @include mixins.p;
+                        font-size: 14px;
+                        color: variables.$white;
+                    }
+    
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        width: 150px;
+                        text-decoration: none;
+                        color: variables.$green;
+                        font-size: 20px;
+    
+                        .ic {
+                            font-size: 26px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
