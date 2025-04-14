@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'mixins';
 
 .btn-intro {
     width: 100%;
@@ -18,4 +19,12 @@
     @extend .btn-intro;
     height: 58px;
     font-size: 15px;
+}
+
+.btn-more {
+    @include mixins.center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid variables.$dark;
+    border-radius: 50%;                
 }
