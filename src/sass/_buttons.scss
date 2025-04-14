@@ -28,3 +28,7 @@
     border: 1px solid variables.$dark;
     border-radius: 50%;                
 }
+
+.btn-all {
+    @extend .btn-intro;
+}

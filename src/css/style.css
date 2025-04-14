@@ -319,8 +319,8 @@ header .btn-menu span {
   gap: 20px;
   padding: 18px 30px;
   background-color: #F3F3F3;
+  box-shadow: 0 7px 0 #191A23;
   border: 1px solid #191A23;
-  box-shadow: 0 5px 0 #191A23;
   border-radius: 45px;
   overflow: hidden;
 }
@@ -346,6 +346,81 @@ header .btn-menu span {
 .main-content .sec .container-cards-process .card-process .header-card .container-title h3 {
   font-size: 16px;
   font-weight: 500;
+  color: #000000;
+}
+.main-content .sec .container-card-team {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 1250px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+.main-content .sec .container-card-team .card-person {
+  box-shadow: 0 7px 0 #191A23;
+  border: 1px solid #191A23;
+  border-radius: 45px;
+  padding: 31px 25px;
+}
+.main-content .sec .container-card-team .card-person .content-card-person {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .header-card-person {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  position: relative;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .header-card-person .container-foto {
+  width: 95px;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .header-card-person .container-foto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .header-card-person .name-and-cargo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .header-card-person .name-and-cargo h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .header-card-person .name-and-cargo p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .header-card-person .container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191A23;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .header-card-person .container-icon i {
+  color: #B9FF66;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .line {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+}
+.main-content .sec .container-card-team .card-person .content-card-person .container-txt p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   color: #000000;
 }
 .main-content .case {
@@ -400,7 +475,7 @@ header .btn-menu span {
   font-size: 26px;
 }
 
-.btn-intro, .btn-cta {
+.btn-intro, .btn-all, .btn-cta {
   width: 100%;
   height: 68px;
   border: 0;
