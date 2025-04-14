@@ -233,6 +233,7 @@
                 @include mixins.bordar;
                 border-radius: 45px;
                 overflow: hidden;
+                transition: all .05s ease;
 
                 .header-card {
                     display: flex;
@@ -258,6 +259,24 @@
                     }
 
                 }
+
+                .line {
+                    width: 100%;
+                    height: 1px;
+                    background-color: variables.$black;
+                }
+
+                .container-text {
+
+                    p {
+                        @include mixins.p;
+                    }
+                }
+            }
+
+            .active {
+                height: auto;
+                background-color: variables.$green;
             }
         }
 
