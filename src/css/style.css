@@ -509,6 +509,106 @@ header .btn-menu span {
   height: 14px;
   object-fit: cover;
 }
+.main-content .sec .container-contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.main-content .sec .container-contact-us .container-form {
+  padding: 40px 20px 50px 20px;
+  background-color: #F3F3F3;
+  border-radius: 45px;
+}
+.main-content .sec .container-contact-us .container-form .form-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.main-content .sec .container-contact-us .container-form .form-contact label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-inputs-radio {
+  display: flex;
+  gap: 30px;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-inputs-radio .form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-inputs-radio .form-group input[type=radio] {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-inputs-radio .form-group input[type=radio]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: #B9FF66;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-inputs-radio .form-group input[type=radio]:checked::after {
+  opacity: 1;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group input {
+  height: 59px;
+  border-radius: 14px;
+  border: 1px solid #000000;
+  padding-inline: 20px;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group input::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: #898989;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group input:focus {
+  outline: none;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group .textarea-msg {
+  height: 140px;
+  border: 1px solid #000000;
+  border-radius: 14px;
+  padding: 20px;
+  resize: none;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group .textarea-msg::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: #898989;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group .textarea-msg:focus {
+  outline: none;
+}
+.main-content .sec .container-contact-us .container-img {
+  display: none;
+}
 .main-content .case {
   position: relative;
   height: 500px;
@@ -561,7 +661,7 @@ header .btn-menu span {
   font-size: 26px;
 }
 
-.btn-intro, .btn-all, .btn-cta {
+.btn-intro, .btn-msg, .btn-all, .btn-cta {
   width: 100%;
   height: 68px;
   border: 0;

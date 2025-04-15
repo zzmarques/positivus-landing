@@ -436,7 +436,127 @@
                 }
             }
         }
+
+        .container-contact-us {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .container-form {
+                padding: 40px 20px 50px 20px;
+                background-color: variables.$gray;
+                border-radius: 45px;
+                
+                .form-contact {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+
+                    label {
+                        @include mixins.p;
+                    }
+                    
+                    .container-inputs-radio {
+                        display: flex;
+                        gap: 30px;
+
+                        .form-group {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            input[type="radio"] {
+                                appearance: none;
+                                width: 28px;
+                                height: 28px;
+                                position: relative;
+                                background-color: variables.$white;
+                                border: 1px solid variables.$black;
+                                border-radius: 50%;
+                                cursor: pointer;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    width: 16px;
+                                    height: 16px;
+                                    background-color: variables.$green;
+                                    border-radius: 50%;
+                                    opacity: 0;
+                                    transition: opacity 0.2s ease;
+                                }
+                                
+                                &:checked::after {
+                                    opacity: 1;
+                                }
+                            }
+                        } 
+
+                        
+                    }
+
+                    .container-group-form {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        width: 100%;
+
+                        .form-group {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+
+                            input {
+                                height: 59px;
+                                border-radius: 14px;
+                                border: 1px solid variables.$black;
+                                padding-inline: 20px;
+
+                                &::placeholder {
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    color: #898989;
+                                }
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+
+                            .textarea-msg {
+                                height: 140px;
+                                border: 1px solid variables.$black;  
+                                border-radius: 14px;
+                                padding: 20px;
+                                resize: none;  
+                                
+                                &::placeholder {
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    color: #898989;
+                                }
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+
+            .container-img {
+                display: none;    
+            }
+
+        }
     }
+
+    
 
     .case {
         position: relative;
