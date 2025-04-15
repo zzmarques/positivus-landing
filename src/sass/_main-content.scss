@@ -360,7 +360,82 @@
             }
         }
 
-        
+        .container-testimonials {
+
+            .card-testimonials {
+                @include mixins.alinhar-b;
+                gap: 40px;
+                padding: 20px 20px 40px 20px;
+                background-color: variables.$dark;
+                border-radius: 45px;
+
+                .content-testimonials {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 35px;
+
+                    .container-txt {
+                        position: relative;
+                        padding: 20px;
+                        border-radius: 45px;
+                        border: 1px solid variables.$green;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: -16px;
+                            left: 45px;
+                            width: 30px;
+                            height: 30px;
+                            background: variables.$dark;
+                            border: 1px solid variables.$green;
+                            transform: rotate(45deg);
+                            clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+                        }
+
+                        p {
+                            @include mixins.p;
+                            font-size: 15px;
+                            color: variables.$white
+                        }
+                    }
+
+                    .container-name {
+                        padding-left: 65px;
+
+                        h3 {
+                            @include mixins.title(16);
+                            color: variables.$green;
+                        }
+
+                        h4 {
+                            @include mixins.title(13);
+                            color: variables.$white;
+                        }
+                        
+                    }
+                }
+
+                .navbar-testimonials {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .container-stars {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        img {
+                            width: 14px;
+                            height: 14px;
+                            object-fit: cover;
+
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .case {

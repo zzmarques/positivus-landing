@@ -34,3 +34,20 @@
 .btn-all {
     @extend .btn-intro;
 }
+
+.btn-testimonials {
+    @include mixins.center;
+
+    span {
+        color: rgba(variables.$white, 0.40);
+    }
+}
+
+
+.active {
+
+    span {
+        color: variables.$white;
+    }
+}
+
