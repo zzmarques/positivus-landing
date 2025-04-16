@@ -661,7 +661,180 @@ header .btn-menu span {
   font-size: 26px;
 }
 
-.btn-intro, .btn-msg, .btn-all, .btn-cta {
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  padding-block: 50px;
+  margin-top: 90px;
+  background-color: #191A23;
+}
+.footer .sec1-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+}
+.footer .sec1-footer .container-sec1-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.footer .sec1-footer .container-sec1-footer .container-logo-footer {
+  width: 150px;
+}
+.footer .sec1-footer .container-sec1-footer .container-logo-footer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.footer .sec1-footer .container-sec1-footer .navbar-footer {
+  width: 100%;
+}
+.footer .sec1-footer .container-sec1-footer .navbar-footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  width: 100%;
+}
+.footer .sec1-footer .container-sec1-footer .navbar-footer ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-block: 4px;
+}
+.footer .sec1-footer .container-sec1-footer .navbar-footer ul li a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer .sec1-footer .container-sec1-footer .container-social-midia {
+  display: none;
+}
+.footer .sec2-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 340px;
+}
+.footer .sec2-footer .container-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.footer .sec2-footer .container-contact h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  padding-inline: 10px;
+  border-radius: 7px;
+  background-color: #B9FF66;
+}
+.footer .sec2-footer .container-contact .content-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.footer .sec2-footer .container-contact .content-contacts p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  font-size: 15px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.footer .sec2-footer .container-contact .content-contacts .wrap {
+  display: flex;
+  flex-direction: column;
+}
+.footer .sec2-footer .conatiner-form-footer {
+  width: 100%;
+  padding: 30px;
+  background-color: #292A32;
+  border-radius: 14px;
+}
+.footer .sec2-footer .conatiner-form-footer .form-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer .sec2-footer .conatiner-form-footer .form-footer input[type=email] {
+  width: 100%;
+  height: 68px;
+  border-radius: 14px;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  padding-inline: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.footer .sec2-footer .conatiner-form-footer .form-footer input[type=email]::placeholder {
+  color: #FFFFFF;
+}
+.footer .sec2-footer .conatiner-form-footer .form-footer input[type=email]:focus {
+  outline: none;
+}
+.footer .sec2-footer .social-midia-sec2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px 0;
+}
+.footer .sec2-footer .social-midia-sec2 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  text-decoration: none;
+  color: #191A23;
+  cursor: pointer;
+}
+.footer .sec2-footer .social-midia-sec2 a i {
+  font-size: 20px;
+}
+.footer .sec3-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+}
+.footer .sec3-footer .container-direitos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.footer .sec3-footer .container-direitos p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+
+.btn-intro, .btn-sub, .btn-msg, .btn-all, .btn-cta {
   width: 100%;
   height: 68px;
   border: 0;
@@ -704,16 +877,16 @@ header .btn-menu span {
   color: #FFFFFF;
 }
 
+.btn-sub {
+  background-color: #B9FF66;
+  color: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Space Grotesk", sans-serif;
-}
-
-section img,
-main img {
-  width: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,12 @@
     align-items: center;
 }
 
+@mixin c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @mixin alinhar-b {
     display: flex;
     flex-direction: column;

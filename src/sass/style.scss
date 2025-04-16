@@ -2,6 +2,7 @@
 @use 'introduction';
 @use 'logotypes';
 @use 'main-content';
+@use 'footer';
 @use 'buttons';
 
 * {
@@ -9,9 +10,4 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Space Grotesk", sans-serif;
-}
-
-section img,
-main img {
-    width: 50px;
 }

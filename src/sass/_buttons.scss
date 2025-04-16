@@ -55,3 +55,9 @@
     @extend .btn-intro;
 }
 
+.btn-sub {
+    @extend .btn-intro;
+    background-color: variables.$green;
+    color: variables.$black;
+}
+
