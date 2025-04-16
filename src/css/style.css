@@ -818,6 +818,8 @@ header .btn-menu span {
   flex-direction: column;
   align-items: center;
   width: 340px;
+  padding-top: 40px;
+  border-top: 3px solid #FFFFFF;
 }
 .footer .sec3-footer .container-direitos {
   display: flex;
