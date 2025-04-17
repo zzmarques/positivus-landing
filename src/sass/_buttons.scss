@@ -19,6 +19,24 @@
     }
 }
 
+.btn-menu {
+    @include mixins.center;
+    cursor: pointer;
+
+    span {
+        font-size: 1.8rem;
+        color: variables.$black;
+    }
+}
+
+.btn-request {
+    @extend .btn-intro;
+}
+
+.btn-close {
+    @extend .btn-menu;
+}
+
 .btn-cta {
     @extend .btn-intro;
     height: 58px;
@@ -46,7 +64,6 @@
         color: rgba(variables.$white, 0.40);
     }
 }
-
 
 .active {
 
