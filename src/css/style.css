@@ -32,9 +32,10 @@ header .btn-menu span {
 }
 @media (width >= 1024px) {
   .introduction {
+    max-width: 1440px;
     height: 515px;
     padding-inline: 80px;
-    margin-block: 70px;
+    margin: 70px auto;
   }
 }
 .introduction .container-introduction {
@@ -131,6 +132,17 @@ header .btn-menu span {
   margin-top: 30px;
   margin-bottom: 40px;
 }
+@media (width >= 1024px) {
+  .logotypes {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1440px;
+    height: auto;
+    overflow: visible;
+    padding-inline: 80px;
+    margin: 0 auto 70px auto;
+  }
+}
 .logotypes .container-logos-1,
 .logotypes .container-logos-2 {
   display: flex;
@@ -142,15 +154,34 @@ header .btn-menu span {
   height: 48px;
   filter: grayscale(100%);
 }
+@media (width >= 1024px) {
+  .logotypes .container-logos-1,
+  .logotypes .container-logos-2 {
+    justify-content: space-between;
+    width: 45%;
+  }
+}
 .logotypes .container-logos-1 {
   position: absolute;
   top: 0;
   left: 50px;
 }
+@media (width >= 1024px) {
+  .logotypes .container-logos-1 {
+    position: relative;
+    left: 0;
+  }
+}
 .logotypes .container-logos-2 {
   position: absolute;
   right: 55px;
   bottom: 0;
+}
+@media (width >= 1024px) {
+  .logotypes .container-logos-2 {
+    position: relative;
+    right: 0;
+  }
 }
 
 .main-content {

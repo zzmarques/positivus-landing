@@ -8,9 +8,11 @@
     height: calc(100vh - 70px);
 
     @include mixins.desktop {
+        max-width: 1440px;
         height: 515px;
         padding-inline: 80px;
-        margin-block: 70px;
+        margin: 70px auto;
+
     }
 
     .container-introduction {

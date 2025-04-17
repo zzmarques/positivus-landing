@@ -1,3 +1,5 @@
+@use './mixins';
+
 .logotypes {
     display: flex;
     flex-direction: column;
@@ -6,6 +8,16 @@
     position: relative;
     margin-top: 30px;
     margin-bottom: 40px;
+
+    @include mixins.desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1440px;
+        height: auto;
+        overflow: visible;
+        padding-inline: 80px;
+        margin: 0 auto 70px auto;
+    }
 
     .container-logos-1,
     .container-logos-2 {
@@ -17,18 +29,33 @@
             height: 48px;
             filter: grayscale(100%);
         }
+
+        @include mixins.desktop {
+            justify-content: space-between;
+            width: 45%;
+        }
     }
 
     .container-logos-1 {
         position: absolute;
         top: 0;
         left: 50px;
+
+        @include mixins.desktop {
+            position: relative;
+            left: 0;
+        }
     }
 
     .container-logos-2 {
         position: absolute;
         right: 55px;
         bottom: 0;
+
+        @include mixins.desktop {
+            position: relative;
+            right: 0;
+        }
     }
 
     
