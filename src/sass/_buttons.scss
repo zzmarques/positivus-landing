@@ -63,5 +63,10 @@
     @extend .btn-intro;
     background-color: variables.$green;
     color: variables.$black;
+
+    @include mixins.desktop {
+        width: 249px;
+        height: 67px
+    }
 }
 
