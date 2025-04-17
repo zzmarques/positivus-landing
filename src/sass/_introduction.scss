@@ -7,20 +7,43 @@
     width: 100%;
     height: calc(100vh - 70px);
 
+    @include mixins.desktop {
+        height: 515px;
+        padding-inline: 80px;
+        margin-block: 70px;
+    }
+
     .container-introduction {
         width: 340px;
         height: 100%;
         padding-block: 20px;
         position: relative;
 
+        @include mixins.desktop {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0;
+        }
+
         .container-text-intro {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
+
+            @include mixins.desktop {
+                justify-content: flex-start;
+                gap: 35px;
+                width: 531px;
+            }
             
             h1 {
                 @include mixins.title(40);
+
+                @include mixins.desktop {
+                    font-size: 60px;
+                }
             }
 
             .content-txt {
@@ -28,9 +51,17 @@
                 flex-direction: column;
                 gap: 30px;
 
+                @include mixins.desktop {
+                    gap: 35px
+                }
+
                 p {
                     @include mixins.p;
                     font-size: 15px;
+
+                    @include mixins.desktop {
+                        font-size: 20px;
+                    }
                 }
             }
         }
@@ -43,6 +74,18 @@
             left: 50%;
             transform: translate(-50%, -50%);
             padding-bottom: 30px;
+
+            @include mixins.desktop {
+                position: relative;
+                width: 600px;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transform: translate(0%, 0%);
+                padding: 0;
+
+
+            }
 
             img {
                 width: 100%;

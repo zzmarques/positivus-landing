@@ -30,11 +30,26 @@ header .btn-menu span {
   width: 100%;
   height: calc(100vh - 70px);
 }
+@media (width >= 1024px) {
+  .introduction {
+    height: 515px;
+    padding-inline: 80px;
+    margin-block: 70px;
+  }
+}
 .introduction .container-introduction {
   width: 340px;
   height: 100%;
   padding-block: 20px;
   position: relative;
+}
+@media (width >= 1024px) {
+  .introduction .container-introduction {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
 }
 .introduction .container-introduction .container-text-intro {
   display: flex;
@@ -42,15 +57,32 @@ header .btn-menu span {
   justify-content: space-between;
   height: 100%;
 }
+@media (width >= 1024px) {
+  .introduction .container-introduction .container-text-intro {
+    justify-content: flex-start;
+    gap: 35px;
+    width: 531px;
+  }
+}
 .introduction .container-introduction .container-text-intro h1 {
   font-size: 40px;
   font-weight: 500;
   color: #000000;
 }
+@media (width >= 1024px) {
+  .introduction .container-introduction .container-text-intro h1 {
+    font-size: 60px;
+  }
+}
 .introduction .container-introduction .container-text-intro .content-txt {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media (width >= 1024px) {
+  .introduction .container-introduction .container-text-intro .content-txt {
+    gap: 35px;
+  }
 }
 .introduction .container-introduction .container-text-intro .content-txt p {
   font-size: 16px;
@@ -58,6 +90,11 @@ header .btn-menu span {
   line-height: 24px;
   color: #000000;
   font-size: 15px;
+}
+@media (width >= 1024px) {
+  .introduction .container-introduction .container-text-intro .content-txt p {
+    font-size: 20px;
+  }
 }
 .introduction .container-introduction .container-img-intro {
   position: absolute;
@@ -67,6 +104,17 @@ header .btn-menu span {
   left: 50%;
   transform: translate(-50%, -50%);
   padding-bottom: 30px;
+}
+@media (width >= 1024px) {
+  .introduction .container-introduction .container-img-intro {
+    position: relative;
+    width: 600px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    padding: 0;
+  }
 }
 .introduction .container-introduction .container-img-intro img {
   width: 100%;
@@ -847,6 +895,11 @@ header .btn-menu span {
   font-weight: 400;
   line-height: 28px;
   color: #FFFFFF;
+}
+@media (width >= 1024px) {
+  .btn-intro, .btn-sub, .btn-msg, .btn-all, .btn-cta {
+    width: 264px;
+  }
 }
 
 .btn-cta {
