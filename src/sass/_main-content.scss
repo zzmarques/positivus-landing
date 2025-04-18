@@ -8,6 +8,12 @@
     gap: 30px;
     width: 100%;
     height: 100%;
+
+    @include mixins.desktop {
+        max-width: 1440px;
+        padding-inline: 80px;
+        margin: 0 auto;
+    }
     
     .sec {
         display: flex;
@@ -15,12 +21,21 @@
         gap: 30px;
         width: 340px;
 
+        @include mixins.desktop {
+            width: 100%;
+        }
+
         .sec-header {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 30px;
             text-align: center;
+
+            @include mixins.desktop {
+                flex-direction: row;
+                gap: 40px;
+            }
 
             .container-title {
                 display: flex;
@@ -33,11 +48,20 @@
                 padding-inline: 10px;
                 background-color: variables.$green;
                 border-radius: 7px;
+
+                @include mixins.desktop {
+                    font-size: 40px
+                }
             }
 
             p {
                 @include mixins.p;
                 font-size: 14px;
+
+                @include mixins.desktop {
+                    text-align: left;
+                    width: 580px;
+                }
             }
         }
 
@@ -46,6 +70,13 @@
             flex-direction: column;
             gap: 30px;
             width: 100%;
+
+            @include mixins.desktop {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                justify-content: space-between;
+                gap: 40px;
+            }
 
             .card-serv {
                 @include mixins.card-serv(variables.$gray);
@@ -61,19 +92,36 @@
                     .container-card-txt {
                         @include mixins.alinhar-b;
 
+                        @include mixins.desktop {
+                            align-items: flex-start
+                        }
+
                         h3 {
                             @include mixins.title(25);
                             padding-inline: 10px;
                             background-color: variables.$green;
                             border-radius: 7px;
+
+                            @include mixins.desktop {
+                                font-size: 30px;
+                            }
+                            
                         }
 
                         .ts {
                             width: 177px;
+
+                            @include mixins.desktop {
+                                width: 200px;
+                            }
                         }
                         
                         a {
+                            @include mixins.center;
+                            gap: 15px;
+                            font-size: 20px;
                             text-decoration: none;
+                            color: variables.$black;
 
                             .ic {
                                 @include mixins.arrow(variables.$dark, variables.$green);
@@ -81,6 +129,10 @@
 
                             .txt {
                                 display: none;
+
+                                @include mixins.desktop {
+                                    display: inline-block;
+                                }
                             }
                         }
                     }
@@ -91,10 +143,19 @@
                         bottom: 20px;
                         width: 150px;
 
+                        @include mixins.desktop {
+                            width: 210px;
+                            height: 170px;
+                        }
+
                         img {
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
+
+                            @include mixins.desktop {
+                                object-fit: contain
+                            }
                         }
                     }
 
@@ -134,7 +195,14 @@
                             width: 146px;
                         }
 
+                        .ts-3 {
+                            width: 165px;
+                        }
+
                         a {
+                            @include mixins.desktop {
+                                color: variables.$white
+                            }
                             .ic {
                                 @include mixins.arrow(variables.$white, variables.$dark);
                             }
@@ -153,10 +221,18 @@
                     .container-card-txt {
                         h3 {
                             width: 85px;
+
+                            @include mixins.desktop {
+                                width:95px;
+                            }
                         }
 
                         .ts {
                             width: 146px;
+
+                            @include mixins.desktop {
+                                width: 165px;
+                            }
                         }
                     }
 
@@ -180,11 +256,17 @@
                 
                     .container-card-txt {
                         h3 {
-                            width: 186px;
+                            background-color: variables.$green;
+                            width: 219px;
+
                         }
 
                         .ts {
                             width: 120px;
+
+                            @include mixins.desktop {
+                                width: 143px;
+                            }
                         }
                     }
                 }

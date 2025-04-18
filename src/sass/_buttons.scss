@@ -50,7 +50,12 @@
     background-color: variables.$gray;
     border: 1px solid variables.$dark;
     border-radius: 50%;   
-    cursor: pointer;             
+    cursor: pointer;   
+
+    span {
+        color: variables.$dark !important;
+    }
+    
 }
 
 .btn-all {
