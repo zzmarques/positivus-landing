@@ -255,6 +255,7 @@ header .navbar ul li {
 }
 @media (width >= 1024px) {
   .main-content .sec .sec-header {
+    width: 100%;
     flex-direction: row;
     gap: 40px;
   }
@@ -675,11 +676,27 @@ header .navbar ul li {
   overflow: hidden;
   padding-bottom: 20px;
 }
+@media (width >= 1024px) {
+  .main-content .sec .container-card-team {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    height: auto;
+    padding: 0;
+    overflow: visible;
+  }
+}
 .main-content .sec .container-card-team .card-person {
   box-shadow: 0 7px 0 #191A23;
   border: 1px solid #191A23;
   border-radius: 45px;
   padding: 31px 25px;
+}
+@media (width >= 1024px) {
+  .main-content .sec .container-card-team .card-person {
+    width: 383px;
+    height: 331px;
+    padding: 40px 35px;
+  }
 }
 .main-content .sec .container-card-team .card-person .content-card-person {
   display: flex;
@@ -1034,6 +1051,11 @@ header .navbar ul li {
   width: 1px;
   height: 200px;
   background-color: #FFFFFF;
+}
+@media (width >= 1024px) {
+  .main-content .team {
+    align-items: flex-end;
+  }
 }
 
 footer {

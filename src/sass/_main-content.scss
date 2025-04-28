@@ -35,6 +35,7 @@
             text-align: center;
 
             @include mixins.desktop {
+                width: 100%;
                 flex-direction: row;
                 gap: 40px;
             }
@@ -419,10 +420,24 @@
             overflow: hidden;
             padding-bottom: 20px;
 
+            @include mixins.desktop {
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                height: auto;
+                padding: 0;
+                overflow: visible;
+            }
+
             .card-person {
                 @include mixins.bordar;
                 border-radius: 45px;
                 padding: 31px 25px;
+
+                @include mixins.desktop {
+                    width: 383px;
+                    height: 331px;
+                    padding: 40px 35px;
+                }
 
                 .content-card-person {
                     display: flex;
@@ -778,6 +793,12 @@
                     background-color: variables.$white
                 }
             }
+        }
+    }
+
+    .team {
+        @include mixins.desktop {
+            align-items: flex-end;
         }
     }
 }
