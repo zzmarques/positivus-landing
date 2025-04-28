@@ -265,6 +265,18 @@ header .navbar ul li {
   flex-direction: column;
   align-items: center;
 }
+@media (width >= 1024px) {
+  .main-content .sec .sec-header .container-title {
+    flex-direction: row;
+    border-radius: 7px;
+    background-color: #B9FF66;
+  }
+}
+@media (width >= 1024px) {
+  .main-content .sec .sec-header .container-title .subtitle {
+    padding-left: 0;
+  }
+}
 .main-content .sec .sec-header h2 {
   font-size: 36px;
   font-weight: 500;
@@ -294,6 +306,21 @@ header .navbar ul li {
   .main-content .sec .sec-header p {
     text-align: left;
     width: 580px;
+  }
+}
+@media (width >= 1024px) {
+  .main-content .sec .sec-header .wor-p {
+    width: 292px;
+  }
+}
+@media (width >= 1024px) {
+  .main-content .sec .sec-header .t-p {
+    width: 473px;
+  }
+}
+@media (width >= 1024px) {
+  .main-content .sec .sec-header .con-p {
+    width: 323px;
   }
 }
 .main-content .sec .services-cards {

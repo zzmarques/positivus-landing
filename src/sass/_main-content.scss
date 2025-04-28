@@ -44,6 +44,19 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                @include mixins.desktop {
+                    flex-direction: row;
+                    border-radius: 7px;
+                    background-color: variables.$green;
+                }
+
+                .subtitle {
+
+                    @include mixins.desktop {
+                        padding-left: 0
+                    }
+                }
             }
 
             h2 {
@@ -64,6 +77,27 @@
                 @include mixins.desktop {
                     text-align: left;
                     width: 580px;
+                }
+            }
+
+            .wor-p {
+                @include mixins.desktop {
+                    width: 292px;
+                    
+                }
+            }
+
+            .t-p {
+                @include mixins.desktop {
+                    width: 473px;
+                    
+                }
+            }
+
+            .con-p {
+                @include mixins.desktop {
+                    width: 323px;
+                    
                 }
             }
         }
