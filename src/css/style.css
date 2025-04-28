@@ -243,6 +243,7 @@ header .navbar ul li {
 @media (width >= 1024px) {
   .main-content .sec {
     width: 100%;
+    gap: 80px;
   }
 }
 .main-content .sec .sec-header {
@@ -908,6 +909,14 @@ header .navbar ul li {
   position: relative;
   height: 500px;
 }
+@media (width >= 1024px) {
+  .main-content .case {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    height: auto;
+  }
+}
 .main-content .case .content-case {
   position: absolute;
   bottom: 0;
@@ -915,12 +924,31 @@ header .navbar ul li {
   width: 357px;
   overflow: hidden;
 }
+@media (width >= 1024px) {
+  .main-content .case .content-case {
+    position: relative;
+    width: 100%;
+    height: 326px;
+    padding: 70px 60px;
+    background-color: #191A23;
+    border-radius: 45px;
+    overflow: visible;
+  }
+}
 .main-content .case .content-case .conatiner-cards-cases {
   display: flex;
   gap: 10px;
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
+}
+@media (width >= 1024px) {
+  .main-content .case .content-case .conatiner-cards-cases {
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    overflow: visible;
+  }
 }
 .main-content .case .content-case .conatiner-cards-cases .card-case {
   display: flex;
@@ -934,6 +962,15 @@ header .navbar ul li {
   flex-shrink: 0;
   width: 310px;
   height: 280px;
+}
+@media (width >= 1024px) {
+  .main-content .case .content-case .conatiner-cards-cases .card-case {
+    width: 286px;
+    height: 188px;
+    flex-shrink: 1;
+    border-radius: 0;
+    padding: 0;
+  }
 }
 .main-content .case .content-case .conatiner-cards-cases .card-case p {
   font-size: 16px;
@@ -957,8 +994,19 @@ header .navbar ul li {
   color: #B9FF66;
   font-size: 20px;
 }
+@media (width >= 1024px) {
+  .main-content .case .content-case .conatiner-cards-cases .card-case a {
+    height: 28px;
+  }
+}
 .main-content .case .content-case .conatiner-cards-cases .card-case a .ic {
   font-size: 26px;
+}
+.main-content .case .content-case .conatiner-cards-cases .line {
+  display: inline-block;
+  width: 1px;
+  height: 200px;
+  background-color: #FFFFFF;
 }
 
 footer {

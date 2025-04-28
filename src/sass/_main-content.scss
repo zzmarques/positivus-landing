@@ -24,6 +24,7 @@
 
         @include mixins.desktop {
             width: 100%;
+            gap: 80px;
         }
 
         .sec-header {
@@ -670,6 +671,13 @@
         position: relative;
         height: 500px;
 
+        @include mixins.desktop {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            height: auto;
+        }
+
         .content-case {
             position: absolute;
             bottom: 0;
@@ -677,19 +685,44 @@
             width: 357px;
             overflow: hidden;
 
+            @include mixins.desktop {
+                position: relative;
+                width: 100%;
+                height: 326px;
+                padding: 70px 60px;
+                background-color: variables.$dark;
+                border-radius: 45px;
+                overflow: visible;
+            }
+
             .conatiner-cards-cases {
                 display: flex;
                 gap: 10px;
                 overflow: scroll;
                 scroll-behavior: smooth;
                 scrollbar-width: none;
+
+                @include mixins.desktop {
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 0;
+                    overflow: visible;
+                }
                 
                 .card-case {
                     @include mixins.alinhar-b;
                     @include mixins.card(variables.$dark);
                     flex-shrink: 0;
                     width: 310px;
-                    height: 280px;                    
+                    height: 280px;
+                    
+                    @include mixins.desktop {
+                        width: 286px;
+                        height: 188px;
+                        flex-shrink: 1;
+                        border-radius: 0;
+                        padding: 0;
+                    }
     
                     p {
                         @include mixins.p;
@@ -705,11 +738,22 @@
                         text-decoration: none;
                         color: variables.$green;
                         font-size: 20px;
+
+                        @include mixins.desktop {
+                            height: 28px;
+                        }
     
                         .ic {
                             font-size: 26px;
                         }
                     }
+                }
+
+                .line {
+                    display: inline-block;
+                    width: 1px;
+                    height: 200px;
+                    background-color: variables.$white
                 }
             }
         }
