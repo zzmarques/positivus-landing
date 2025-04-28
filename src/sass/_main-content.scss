@@ -10,6 +10,7 @@
     height: 100%;
 
     @include mixins.desktop {
+        gap: 140px;
         max-width: 1440px;
         padding-inline: 80px;
         margin: 0 auto;
@@ -278,13 +279,30 @@
             border: 0;
             box-shadow: none;
 
+            @include mixins.desktop {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-inline: 60px
+            }
+
             .cta-txt {
                 @include mixins.alinhar-b;
                 height: 100%;
                 text-align: left;
 
+                @include mixins.desktop {
+                    gap: 26px;
+                    width: 500px;
+                    height: 227px;
+                }
+
                 h3 {
-                    @include mixins.title(26)
+                    @include mixins.title(26);
+
+                    @include mixins.desktop {
+                        font-size: 30px;
+                    }
                 }
 
                 p {
@@ -296,6 +314,14 @@
 
             figure {
                 display: none;
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+                @include mixins.desktop {
+                    display: block;
+                }
             }
         }
 
