@@ -344,6 +344,11 @@
                 overflow: hidden;
                 transition: all .05s ease;
 
+                @include mixins.desktop {
+                    height: 159px;
+                    padding: 41px 60px;
+                }
+
                 .header-card {
                     display: flex;
                     justify-content: space-between;
@@ -352,18 +357,35 @@
                     width: 100%;
                     height: 100%;
 
+                    @include mixins.desktop  {
+                        height: 77px;
+                    }
+
                     .container-title {
                         display: flex;
                         align-items: center;
                         width: 233px;
                         gap: 10px;
 
+                        @include mixins.desktop  {
+                            gap: 25px;
+                            width: auto;
+                        }
+
                         h1 {
                             @include mixins.title(35);
+
+                            @include mixins.desktop  {
+                                font-size: 60px
+                            }
                         }
 
                         h3 {
                             @include mixins.title(16);
+
+                            @include mixins.desktop  {
+                                font-size: 30px
+                            }
                         }
                     }
 

@@ -57,10 +57,20 @@
     background-color: variables.$gray;
     border: 1px solid variables.$dark;
     border-radius: 50%;   
-    cursor: pointer;   
+    cursor: pointer;
+
+    @include mixins.desktop  {
+        width: 58px;
+        height: 58px;
+    }
 
     span {
         color: variables.$dark !important;
+
+        @include mixins.desktop  {
+            font-size: 40px;
+            font-weight: bold
+        }
     }
     
 }
