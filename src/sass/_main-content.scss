@@ -673,16 +673,41 @@
             flex-direction: column;
             gap: 40px;
 
+            @include mixins.desktop {
+                background-color: variables.$gray;
+                padding: 60px 100px 80px 100px;
+                border-radius: 45px;
+                position: relative;
+                overflow: hidden;
+            }
+
             .container-form {
                 padding: 40px 20px 50px 20px;
                 background-color: variables.$gray;
                 border-radius: 45px;
+
+                @include mixins.desktop {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    width: 556px;
+                    height: 633px;
+                    background-color: transparent;
+                    padding: 0;
+                    border-radius: 0;
+                    position: relative;
+                    z-index: 999;
+                }
                 
                 .form-contact {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     gap: 20px;
+
+                    @include mixins.desktop {
+                        gap: 40px;
+                    }
 
                     label {
                         @include mixins.p;
@@ -691,6 +716,10 @@
                     .container-inputs-radio {
                         display: flex;
                         gap: 30px;
+
+                        @include mixins.desktop {
+                            width: 100%;
+                        }
 
                         .form-group {
                             display: flex;
@@ -735,6 +764,11 @@
                         flex-direction: column;
                         gap: 20px;
                         width: 100%;
+                        
+                        @include mixins.desktop {
+                            width: 100%;
+                            gap: 25px;
+                        }
 
                         .form-group {
                             display: flex;
@@ -764,6 +798,11 @@
                                 border-radius: 14px;
                                 padding: 20px;
                                 resize: none;  
+
+                                @include mixins.desktop {
+                                    height: 190px;
+                                    padding: 18px 30px;
+                                }
                                 
                                 &::placeholder {
                                     font-size: 18px;
@@ -781,7 +820,20 @@
             } 
 
             .container-img {
-                display: none;    
+                display: none;
+                position: absolute;
+                top: 50%;
+                right: -327px;
+                transform: translateY(-50%);
+                height: 648px;
+
+                @include mixins.desktop {
+                    display: block;
+                }
+
+                img {
+                    object-fit: cover;
+                }
             }
 
         }

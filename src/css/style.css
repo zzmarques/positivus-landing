@@ -348,7 +348,7 @@ header .navbar ul li {
 }
 @media (width >= 1024px) {
   .main-content .sec .services-cards .card-serv {
-    width: 600px;
+    width: 570px;
     height: 310px;
   }
 }
@@ -452,7 +452,7 @@ header .navbar ul li {
 }
 @media (width >= 1024px) {
   .main-content .sec .services-cards .gre {
-    width: 600px;
+    width: 570px;
     height: 310px;
   }
 }
@@ -473,7 +473,7 @@ header .navbar ul li {
 }
 @media (width >= 1024px) {
   .main-content .sec .services-cards .dark {
-    width: 600px;
+    width: 570px;
     height: 310px;
   }
 }
@@ -934,16 +934,44 @@ header .navbar ul li {
   flex-direction: column;
   gap: 40px;
 }
+@media (width >= 1024px) {
+  .main-content .sec .container-contact-us {
+    background-color: #F3F3F3;
+    padding: 60px 100px 80px 100px;
+    border-radius: 45px;
+    position: relative;
+    overflow: hidden;
+  }
+}
 .main-content .sec .container-contact-us .container-form {
   padding: 40px 20px 50px 20px;
   background-color: #F3F3F3;
   border-radius: 45px;
+}
+@media (width >= 1024px) {
+  .main-content .sec .container-contact-us .container-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 556px;
+    height: 633px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    position: relative;
+    z-index: 999;
+  }
 }
 .main-content .sec .container-contact-us .container-form .form-contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+@media (width >= 1024px) {
+  .main-content .sec .container-contact-us .container-form .form-contact {
+    gap: 40px;
+  }
 }
 .main-content .sec .container-contact-us .container-form .form-contact label {
   font-size: 16px;
@@ -959,6 +987,11 @@ header .navbar ul li {
 .main-content .sec .container-contact-us .container-form .form-contact .container-inputs-radio {
   display: flex;
   gap: 30px;
+}
+@media (width >= 1024px) {
+  .main-content .sec .container-contact-us .container-form .form-contact .container-inputs-radio {
+    width: 100%;
+  }
 }
 .main-content .sec .container-contact-us .container-form .form-contact .container-inputs-radio .form-group {
   display: flex;
@@ -997,6 +1030,12 @@ header .navbar ul li {
   gap: 20px;
   width: 100%;
 }
+@media (width >= 1024px) {
+  .main-content .sec .container-contact-us .container-form .form-contact .container-group-form {
+    width: 100%;
+    gap: 25px;
+  }
+}
 .main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group {
   display: flex;
   flex-direction: column;
@@ -1023,6 +1062,12 @@ header .navbar ul li {
   padding: 20px;
   resize: none;
 }
+@media (width >= 1024px) {
+  .main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group .textarea-msg {
+    height: 190px;
+    padding: 18px 30px;
+  }
+}
 .main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group .textarea-msg::placeholder {
   font-size: 18px;
   font-weight: 400;
@@ -1033,6 +1078,19 @@ header .navbar ul li {
 }
 .main-content .sec .container-contact-us .container-img {
   display: none;
+  position: absolute;
+  top: 50%;
+  right: -327px;
+  transform: translateY(-50%);
+  height: 648px;
+}
+@media (width >= 1024px) {
+  .main-content .sec .container-contact-us .container-img {
+    display: block;
+  }
+}
+.main-content .sec .container-contact-us .container-img img {
+  object-fit: cover;
 }
 .main-content .case {
   position: relative;
@@ -1581,6 +1639,22 @@ footer .footer .sec3-footer .container-direitos p, footer .footer .sec3-footer .
 
 .active span {
   color: #FFFFFF;
+}
+
+@media (width >= 1024px) {
+  .mob {
+    display: none;
+  }
+}
+
+.desk {
+  display: none;
+}
+@media (width >= 1024px) {
+  .desk {
+    display: block;
+    width: 100%;
+  }
 }
 
 .btn-sub {

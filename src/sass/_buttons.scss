@@ -98,6 +98,22 @@
     @extend .btn-intro;
 }
 
+.mob {
+
+    @include mixins.desktop {
+        display: none
+    }
+}
+
+.desk {
+    display: none;
+
+    @include mixins.desktop {
+        display: block;
+        width: 100%;
+    }
+}
+
 .btn-sub {
     @extend .btn-intro;
     background-color: variables.$green;
