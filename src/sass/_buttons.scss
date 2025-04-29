@@ -23,6 +23,10 @@
     @include mixins.center;
     cursor: pointer;
 
+    @include mixins.desktop {
+        display: none;
+    }
+
     span {
         font-size: 1.8rem;
         color: variables.$black;
@@ -31,6 +35,10 @@
 
 .btn-request {
     @extend .btn-intro;
+    background-color: transparent;
+    border: 1px solid variables.$dark;
+
+    color: variables.$dark;
 }
 
 .btn-close {
