@@ -805,30 +805,72 @@ header .navbar ul li {
   background-color: #191A23;
   border-radius: 45px;
 }
-.main-content .sec .container-testimonials .card-testimonials .content-testimonials {
+@media (width >= 1024px) {
+  .main-content .sec .container-testimonials .card-testimonials {
+    justify-content: center;
+    align-items: center;
+    height: 625px;
+    gap: 124px;
+    padding: 0;
+  }
+}
+@media (width >= 1024px) {
+  .main-content .sec .container-testimonials .card-testimonials .container-tes {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+.main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials {
   display: flex;
   flex-direction: column;
   gap: 35px;
 }
-.main-content .sec .container-testimonials .card-testimonials .content-testimonials .container-txt {
+@media (width >= 1024px) {
+  .main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials {
+    width: 606px;
+    height: 335px;
+    flex-shrink: 0;
+  }
+}
+.main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-txt {
   position: relative;
   padding: 20px;
   border-radius: 45px;
   border: 1px solid #B9FF66;
 }
-.main-content .sec .container-testimonials .card-testimonials .content-testimonials .container-txt::after {
+@media (width >= 1024px) {
+  .main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 266px;
+    padding: 0;
+  }
+}
+.main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-txt::after {
   content: "";
   position: absolute;
-  bottom: -16px;
+  bottom: -15px;
   left: 45px;
-  width: 30px;
-  height: 30px;
+  width: 29px;
+  height: 29px;
   background: #191A23;
   border: 1px solid #B9FF66;
   transform: rotate(45deg);
   clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
 }
-.main-content .sec .container-testimonials .card-testimonials .content-testimonials .container-txt p {
+@media (width >= 1024px) {
+  .main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-txt::after {
+    bottom: -18px;
+    left: 75px;
+    width: 34px;
+    height: 34px;
+  }
+}
+.main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-txt p {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -837,20 +879,31 @@ header .navbar ul li {
   color: #FFFFFF;
 }
 @media (width >= 1024px) {
-  .main-content .sec .container-testimonials .card-testimonials .content-testimonials .container-txt p {
+  .main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-txt p {
     font-size: 18px;
   }
 }
-.main-content .sec .container-testimonials .card-testimonials .content-testimonials .container-name {
+@media (width >= 1024px) {
+  .main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-txt p {
+    font-size: 18px;
+    width: 502px;
+  }
+}
+.main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-name {
   padding-left: 65px;
 }
-.main-content .sec .container-testimonials .card-testimonials .content-testimonials .container-name h3 {
+@media (width >= 1024px) {
+  .main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-name {
+    padding-left: 90px;
+  }
+}
+.main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-name h3 {
   font-size: 16px;
   font-weight: 500;
   color: #000000;
   color: #B9FF66;
 }
-.main-content .sec .container-testimonials .card-testimonials .content-testimonials .container-name h4 {
+.main-content .sec .container-testimonials .card-testimonials .container-tes .content-testimonials .container-name h4 {
   font-size: 13px;
   font-weight: 500;
   color: #000000;
@@ -860,6 +913,11 @@ header .navbar ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (width >= 1024px) {
+  .main-content .sec .container-testimonials .card-testimonials .navbar-testimonials {
+    width: 564px;
+  }
 }
 .main-content .sec .container-testimonials .card-testimonials .navbar-testimonials .container-stars {
   display: flex;

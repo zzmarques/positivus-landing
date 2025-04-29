@@ -541,7 +541,7 @@
         }
 
         .container-testimonials {
-
+            
             .card-testimonials {
                 @include mixins.alinhar-b;
                 gap: 40px;
@@ -549,50 +549,97 @@
                 background-color: variables.$dark;
                 border-radius: 45px;
 
-                .content-testimonials {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 35px;
+                @include mixins.desktop {
+                    justify-content: center;
+                    align-items: center;
+                    height: 625px;
+                    gap: 124px;
+                    padding: 0;
+                }
 
-                    .container-txt {
-                        position: relative;
-                        padding: 20px;
-                        border-radius: 45px;
-                        border: 1px solid variables.$green;
+                .container-tes {
 
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            bottom: -16px;
-                            left: 45px;
-                            width: 30px;
-                            height: 30px;
-                            background: variables.$dark;
-                            border: 1px solid variables.$green;
-                            transform: rotate(45deg);
-                            clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
-                        }
-
-                        p {
-                            @include mixins.p;
-                            font-size: 15px;
-                            color: variables.$white
-                        }
+                    @include mixins.desktop {
+                        display: flex;
+                        justify-content: center;
+                        gap: 50px;
+                        width: 100%;
+                        overflow: hidden;
                     }
 
-                    .container-name {
-                        padding-left: 65px;
+                    .content-testimonials {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 35px;
 
-                        h3 {
-                            @include mixins.title(16);
-                            color: variables.$green;
+                        @include mixins.desktop {
+                            width: 606px;
+                            height: 335px;
+                            flex-shrink: 0;
                         }
 
-                        h4 {
-                            @include mixins.title(13);
-                            color: variables.$white;
+                        .container-txt {
+                            position: relative;
+                            padding: 20px;
+                            border-radius: 45px;
+                            border: 1px solid variables.$green;
+
+                            @include mixins.desktop {
+                                @include mixins.center;
+                                height: 266px;
+                                padding: 0;
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: -15px;
+                                left: 45px;
+                                width: 29px;
+                                height: 29px;
+                                background: variables.$dark;
+                                border: 1px solid variables.$green;
+                                transform: rotate(45deg);
+                                clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+
+                                @include mixins.desktop {
+                                    bottom: -18px;
+                                    left: 75px;
+                                    width: 34px;
+                                    height: 34px
+                                }
+                            }
+
+                            p {
+                                @include mixins.p;
+                                font-size: 15px;
+                                color: variables.$white;
+
+                                @include mixins.desktop {
+                                    font-size: 18px;
+                                    width: 502px;
+                                }
+                            }
                         }
-                        
+
+                        .container-name {
+                            padding-left: 65px;
+
+                            @include mixins.desktop { 
+                                padding-left: 90px                          
+                            }
+
+                            h3 {
+                                @include mixins.title(16);
+                                color: variables.$green;
+                            }
+
+                            h4 {
+                                @include mixins.title(13);
+                                color: variables.$white;
+                            }
+                            
+                        }
                     }
                 }
 
@@ -600,6 +647,10 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+
+                    @include mixins.desktop {
+                        width: 564px;
+                    }
 
                     .container-stars {
                         display: flex;
