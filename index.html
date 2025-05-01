@@ -701,15 +701,15 @@
             <div class="container-contact-us">
 
                 <div class="container-form">
-                    <form class="form-contact">
+                    <form class="form-contact" id="c-form">
                         <div class="container-inputs-radio">
                             <div class="form-group">
-                                <input type="radio" name="say" id="say">
+                                <input type="radio" name="op" id="say">
                                 <label for="say">Say HI</label>
                             </div>
 
                             <div class="form-group">
-                                <input type="radio" name="get" id="get">
+                                <input type="radio" name="op" id="get">
                                 <label for="get">Get a Quote</label>
                             </div>
                         </div>
@@ -717,21 +717,21 @@
                         <div class="container-group-form">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" id="name" placeholder="Name">
+                                <input type="text" name="contact-form" id="name" placeholder="Name">
                             </div>
         
                             <div class="form-group">
                                 <label for="email">Email*</label>
-                                <input type="email" name="email" id="email" placeholder="Email">
+                                <input type="email" name="contact-form" id="email" placeholder="Email">
                             </div>
         
                             <div class="form-group">
                                 <label for="message">Message*</label>
-                                <textarea name="message" id="message" class="textarea-msg" placeholder="Message"></textarea>
+                                <textarea name="contact-form" id="message" class="textarea-msg" placeholder="Message"></textarea>
                             </div>
                         </div>
                     </form>
-                    <button class="btn-msg desk">Send Message</button>
+                    <button type="button" class="btn-msg desk" form="c-form">Send Message</button>
                 </div>
 
                 <button class="btn-msg mob">Send Message</button>
