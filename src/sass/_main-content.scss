@@ -696,7 +696,7 @@
                     padding: 0;
                     border-radius: 0;
                     position: relative;
-                    z-index: 999;
+                    z-index: 777;
                 }
                 
                 .form-contact {
@@ -755,8 +755,6 @@
                                 }
                             }
                         } 
-
-                        
                     }
 
                     .container-group-form {
@@ -774,12 +772,14 @@
                             display: flex;
                             flex-direction: column;
                             gap: 5px;
+                            position: relative;
 
                             input {
                                 height: 59px;
                                 border-radius: 14px;
                                 border: 1px solid variables.$black;
                                 padding-inline: 20px;
+                                transition: border 0.3s ease;
 
                                 &::placeholder {
                                     font-size: 18px;
@@ -813,6 +813,19 @@
                                 &:focus {
                                     outline: none;
                                 }
+                            }
+
+                            .error {
+                                border: 2px solid variables.$error;
+                            }
+
+                            .erro {
+                                position: absolute;
+                                left: 20px;
+                                bottom: -17px;
+                                font-size: 13px;
+                                font-weight: bold;
+                                color: variables.$error;
                             }
                         }
                     }

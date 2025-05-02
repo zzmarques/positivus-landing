@@ -1009,7 +1009,7 @@ header .navbar ul li {
     padding: 0;
     border-radius: 0;
     position: relative;
-    z-index: 999;
+    z-index: 777;
   }
 }
 .main-content .sec .container-contact-us .container-form .form-contact {
@@ -1090,12 +1090,14 @@ header .navbar ul li {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: relative;
 }
 .main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group input {
   height: 59px;
   border-radius: 14px;
   border: 1px solid #000000;
   padding-inline: 20px;
+  transition: border 0.3s ease;
 }
 .main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group input::placeholder {
   font-size: 18px;
@@ -1125,6 +1127,17 @@ header .navbar ul li {
 }
 .main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group .textarea-msg:focus {
   outline: none;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group .error {
+  border: 2px solid #EF4444;
+}
+.main-content .sec .container-contact-us .container-form .form-contact .container-group-form .form-group .erro {
+  position: absolute;
+  left: 20px;
+  bottom: -17px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #EF4444;
 }
 .main-content .sec .container-contact-us .container-img {
   display: none;

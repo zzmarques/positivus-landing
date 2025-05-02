@@ -26,20 +26,51 @@ const hiddenProcess = (card, btn) => {
     card.classList.remove('active');
 };
 
+const handleError = (input) => {
+    if (input.value === '' && input.parentNode.querySelector('span').classList.contains('in')) {
+        input.parentNode.querySelector('span').remove()
+        spanError = `<span class="erro ob">Campo obrigatório.</span>`;
+        input.parentNode.insertAdjacentHTML('afterbegin', spanError);
+    }
+}
+
+const showError = (input) => {
+    let spanError;
+    
+    input.value === '' ? 
+        spanError = `<span class="erro ob">Campo obrigatório.</span>` 
+    :
+        spanError = `<span class="erro in">Valor incorreto.</span>`;
+    handleError(input);
+    if (input.parentNode.querySelector('span')) {
+        return;
+    }
+    input.classList.add('error');
+    input.parentNode.insertAdjacentHTML('afterbegin', spanError);
+}
+
+const hiddenError = (input) => {
+    const spans = input.parentNode.querySelectorAll('span');
+    input.classList.remove('error');
+    spans.forEach(span => {
+        if (span) span.remove();      
+    });
+}
+
 const emailValidator = (email) => {
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    !regexEmail.test(email.value.trim()) ? console.log('error') : console.log('sem error');
+    !regexEmail.test(email.value.trim()) ? showError(email) : hiddenError(email);
 };
 
 const textValidator = (input) => {
     const textClean = input.value.trim();
     const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
 
-    !regex.test(textClean) ? console.log('erro') : console.log('sem erro');
+    !regex.test(textClean) ? showError(input): hiddenError(input);
 };
 
 const emptyValidator = (input) => {
-    input.value === '' ? console.log('erro') : console.log('sem erro');
+    input.value === '' ?  showError(input) : hiddenError(input);
 };
 
 const separator = (input) => {
