@@ -26,7 +26,7 @@ const hiddenProcess = (card, btn) => {
     card.classList.remove('active');
 };
 
-const handleError = (input) => {
+const handleError = (input) => {    
     if (input.value === '' && input.parentNode.querySelector('span').classList.contains('in')) {
         input.parentNode.querySelector('span').remove()
         spanError = `<span class="erro ob">Campo obrigatório.</span>`;
@@ -41,12 +41,12 @@ const showError = (input) => {
         spanError = `<span class="erro ob">Campo obrigatório.</span>` 
     :
         spanError = `<span class="erro in">Valor incorreto.</span>`;
-    handleError(input);
     if (input.parentNode.querySelector('span')) {
         return;
     }
     input.classList.add('error');
     input.parentNode.insertAdjacentHTML('afterbegin', spanError);
+    handleError(input);
 }
 
 const hiddenError = (input) => {
