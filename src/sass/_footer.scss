@@ -216,31 +216,49 @@ footer {
                         flex-direction: row;
                     }
 
-                    input[type="email"] {
-                        width: 100%;
-                        height: 68px;
-                        border-radius: 14px;
-                        background-color: transparent;
-                        border: 1px solid variables.$white;
-                        padding-inline: 30px;
+                    .form-group {
+                        position: relative;
+                        input[type="email"] {
+                            width: 100%;
+                            height: 68px;
+                            border-radius: 14px;
+                            background-color: transparent;
+                            border: 1px solid variables.$white;
+                            padding-inline: 30px;
 
-                        font-size: 18px;
-                        font-weight: 400;
-                        color: variables.$white;
-
-                        &::placeholder {
+                            font-size: 18px;
+                            font-weight: 400;
                             color: variables.$white;
+
+                            &::placeholder {
+                                color: variables.$white;
+                            }
+
+                            &:focus {
+                                outline: none;
+                            }
+
+                            @include mixins.desktop {
+                                width: 285px;
+                                height: 67px
+                            }
                         }
 
-                        &:focus {
-                            outline: none;
+                        .error {
+                            border: 2px solid variables.$error !important;
                         }
 
-                        @include mixins.desktop {
-                            width: 285px;
-                            height: 67px
+                        .erro {
+                            position: absolute;
+                            left: 20px;
+                            bottom: -17px;
+                            font-size: 13px;
+                            font-weight: bold;
+                            color: variables.$error;
                         }
                     }
+
+                    
                 }
             }
 

@@ -4,8 +4,11 @@ const btnMore = document.querySelectorAll('.btn-more');
 const cardsProcess = document.querySelectorAll('.card-process');
 const inputsSQ = document.querySelectorAll('input[name="op"]');
 const contactForm = document.querySelector('form.form-contact');
+const footerForm = document.querySelector('form.form-footer');
+const inputEmail = footerForm.querySelector('input');
 const inputsContact = contactForm.querySelectorAll('[name="contact-form"]');
 const btnSendMsg = document.querySelectorAll('.btn-msg');
+const btnSub = document.querySelector('.btn-sub');
 const [name, email, msg] = Array.from(inputsContact);
 
 const openMenu = () => {
@@ -58,6 +61,8 @@ const hiddenError = (input) => {
 }
 
 const emailValidator = (email) => {
+    console.log(email);
+    
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     !regexEmail.test(email.value.trim()) ? showError(email) : hiddenError(email);
 };
@@ -74,7 +79,7 @@ const emptyValidator = (input) => {
 };
 
 const separator = (input) => {
-    if (input === email) {
+    if (input.type === "email") {
         emailValidator(input);
     } else {
         textValidator(input)
@@ -82,6 +87,7 @@ const separator = (input) => {
 };
 
 contactForm.addEventListener('submit', (e) => e.preventDefault());
+footerForm.addEventListener('submit', (e) => e.preventDefault());
 
 btnMenu.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -110,7 +116,15 @@ btnSendMsg.forEach(btn => {
     btn.addEventListener('click', () => {
         inputsContact.forEach(i => emptyValidator(i));
     });
-})
+});
+
+btnSub.addEventListener('click', () => {
+    emptyValidator(inputEmail);
+});
+
+inputEmail.addEventListener('input', () => {
+        separator(inputEmail);
+});
 
 inputsSQ.forEach(op => {
     op.addEventListener('click', () => {
