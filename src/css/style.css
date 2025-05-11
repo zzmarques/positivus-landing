@@ -672,7 +672,8 @@ header .navbar ul li {
   border: 1px solid #191A23;
   border-radius: 45px;
   overflow: hidden;
-  transition: all 0.05s ease;
+  transition: height 0.5s;
+  interpolate-size: allow-keywords;
 }
 @media (width >= 1024px) {
   .main-content .sec .container-cards-process .card-process {

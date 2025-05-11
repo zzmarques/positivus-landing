@@ -377,7 +377,8 @@
                 @include mixins.bordar;
                 border-radius: 45px;
                 overflow: hidden;
-                transition: all .05s ease;
+                transition: height .5s;
+                interpolate-size: allow-keywords;
 
                 @include mixins.desktop {
                     height: 159px;
