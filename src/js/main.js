@@ -1,3 +1,4 @@
+
 const btnMenu = document.querySelectorAll('.btn-m');
 const navBar = document.querySelector('.navbar');
 const btnMore = document.querySelectorAll('.btn-more');
@@ -9,7 +10,9 @@ const inputEmail = footerForm.querySelector('input');
 const inputsContact = contactForm.querySelectorAll('[name="contact-form"]');
 const btnSendMsg = document.querySelectorAll('.btn-msg');
 const btnSub = document.querySelector('.btn-sub');
-const [name, email, msg] = Array.from(inputsContact);
+const cardReviews = document.querySelector('.content-testimonials');
+const btnReviews = document.querySelectorAll('.btn-testimonials');
+const stars = document.querySelectorAll('.star');
 
 const openMenu = () => {
     navBar.style.display = 'flex';
@@ -86,6 +89,57 @@ const separator = (input) => {
     }
 };
 
+const nextReviews = () => {
+    for (let i = 0; i < stars.length; i++) {
+        if (stars[i].classList.contains("green")) {
+            
+            if (i === stars.length - 1) {
+                return;
+            }
+
+            stars[i].src = 'src/assets/img/start-white.png';
+            stars[i].classList.remove("green");
+
+            stars[i + 1].src = 'src/assets/img/start-green.png';
+            stars[i + 1].classList.add("green");
+
+            if (i + 1 === stars.length - 1) {
+                btnReviews[1].classList.remove('active');
+                btnReviews[0].classList.add('active');
+            }
+
+            break;
+        }
+
+    }
+
+};
+
+const backReviews = () => {
+    for (let i = 0; i < stars.length; i++) {
+        if (stars[i].classList.contains("green")) {
+
+            if (i === 0) {
+                return;
+            }
+
+            stars[i].src = 'src/assets/img/start-white.png';
+            stars[i].classList.remove("green");
+
+            stars[i - 1].src = 'src/assets/img/start-green.png';
+            stars[i - 1].classList.add("green");
+
+            if (i - 1 === 0) {
+                btnReviews[0].classList.remove('active');
+                btnReviews[1].classList.add('active');
+            }
+
+            break;
+        }
+    }
+
+}
+
 contactForm.addEventListener('submit', (e) => e.preventDefault());
 footerForm.addEventListener('submit', (e) => e.preventDefault());
 
@@ -141,3 +195,16 @@ inputsContact.forEach(i => {
         separator(i);
     });
 });
+
+btnReviews.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.contains('next') ? nextReviews() : backReviews();
+    });
+});
+
+const getReviews = async () => {
+    const response = await fetch('../src/json/testimonials.json');
+    const dados = await response.json();
+
+}
+getReviews();
