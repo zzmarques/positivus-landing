@@ -89,9 +89,12 @@
 
 .btn-testimonials {
     @include mixins.center;
-
+    cursor: pointer;
+    
     span {
+        transition: color .9s ease;
         color: rgba(variables.$white, 0.40);
+
     }
 }
 

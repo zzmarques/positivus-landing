@@ -1,18 +1,32 @@
-
-const btnMenu = document.querySelectorAll('.btn-m');
 const navBar = document.querySelector('.navbar');
-const btnMore = document.querySelectorAll('.btn-more');
 const cardsProcess = document.querySelectorAll('.card-process');
+
 const inputsSQ = document.querySelectorAll('input[name="op"]');
 const contactForm = document.querySelector('form.form-contact');
 const footerForm = document.querySelector('form.form-footer');
 const inputEmail = footerForm.querySelector('input');
 const inputsContact = contactForm.querySelectorAll('[name="contact-form"]');
+
+const btnMenu = document.querySelectorAll('.btn-m');
+const btnMore = document.querySelectorAll('.btn-more');
 const btnSendMsg = document.querySelectorAll('.btn-msg');
 const btnSub = document.querySelector('.btn-sub');
-const cardReviews = document.querySelector('.content-testimonials');
+const btnAll = document.querySelector('.btn-all');
 const btnReviews = document.querySelectorAll('.btn-testimonials');
+
 const stars = document.querySelectorAll('.star');
+
+const contentReviews = document.querySelectorAll('.container-tes p');
+const nameReviews = document.querySelectorAll('.container-tes h3');
+const cargoReviews = document.querySelectorAll('.container-tes h4');
+let dateReviews;
+
+(async () => {
+    const response = await fetch('../src/json/testimonials.json');
+    const dados = await response.json();
+
+    dateReviews = dados;
+})();
 
 const openMenu = () => {
     navBar.style.display = 'flex';
@@ -89,7 +103,7 @@ const separator = (input) => {
     }
 };
 
-const nextReviews = () => {
+const nextReviews = () => {    
     for (let i = 0; i < stars.length; i++) {
         if (stars[i].classList.contains("green")) {
             
@@ -99,6 +113,10 @@ const nextReviews = () => {
 
             stars[i].src = 'src/assets/img/start-white.png';
             stars[i].classList.remove("green");
+
+            contentReviews.forEach(p => p.innerHTML = dateReviews[i + 1].text);
+            nameReviews.forEach(n => n.innerHTML = dateReviews[i + 1].name);
+            cargoReviews.forEach(c => c.innerHTML = dateReviews[i + 1].title);
 
             stars[i + 1].src = 'src/assets/img/start-green.png';
             stars[i + 1].classList.add("green");
@@ -125,6 +143,10 @@ const backReviews = () => {
 
             stars[i].src = 'src/assets/img/start-white.png';
             stars[i].classList.remove("green");
+
+            contentReviews.forEach(p => p.innerHTML = dateReviews[i - 1].text);
+            nameReviews.forEach(n => n.innerHTML = dateReviews[i - 1].name);
+            cargoReviews.forEach(c => c.innerHTML = dateReviews[i - 1].title);
 
             stars[i - 1].src = 'src/assets/img/start-green.png';
             stars[i - 1].classList.add("green");
@@ -176,6 +198,11 @@ btnSub.addEventListener('click', () => {
     emptyValidator(inputEmail);
 });
 
+btnAll.addEventListener('click', () => {
+    const containerTeam = document.querySelector('.container-card-team');
+    containerTeam.style.height = 'auto';
+})
+
 inputEmail.addEventListener('input', () => {
         separator(inputEmail);
 });
@@ -201,10 +228,3 @@ btnReviews.forEach(btn => {
         btn.classList.contains('next') ? nextReviews() : backReviews();
     });
 });
-
-const getReviews = async () => {
-    const response = await fetch('../src/json/testimonials.json');
-    const dados = await response.json();
-
-}
-getReviews();

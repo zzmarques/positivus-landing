@@ -753,14 +753,14 @@ header .navbar ul li {
   height: 1250px;
   overflow: hidden;
   padding-bottom: 20px;
+  transition: height 0.5s;
+  interpolate-size: allow-keywords;
 }
 @media (width >= 1024px) {
   .main-content .sec .container-card-team {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    height: auto;
-    padding: 0;
-    overflow: visible;
+    height: 340px;
   }
 }
 .main-content .sec .container-card-team .card-person {
@@ -868,6 +868,7 @@ header .navbar ul li {
 @media (width >= 1024px) {
   .main-content .sec .container-testimonials .card-testimonials .container-tes {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 50px;
     width: 100%;
@@ -959,6 +960,14 @@ header .navbar ul li {
   font-weight: 500;
   color: #000000;
   color: #FFFFFF;
+}
+.main-content .sec .container-testimonials .card-testimonials .container-tes .tes-mob {
+  display: none;
+}
+@media (width >= 1024px) {
+  .main-content .sec .container-testimonials .card-testimonials .container-tes .tes-mob {
+    display: flex;
+  }
 }
 .main-content .sec .container-testimonials .card-testimonials .navbar-testimonials {
   display: flex;
@@ -1262,6 +1271,7 @@ header .navbar ul li {
 @media (width >= 1024px) {
   .main-content .team {
     align-items: flex-end;
+    gap: 30px;
   }
 }
 
@@ -1721,8 +1731,10 @@ footer .footer .sec3-footer .container-direitos p, footer .footer .sec3-footer .
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .btn-testimonials span {
+  transition: color 0.9s ease;
   color: rgba(255, 255, 255, 0.4);
 }
 

@@ -454,13 +454,13 @@
             height: 1250px;
             overflow: hidden;
             padding-bottom: 20px;
+            transition: height .5s;
+            interpolate-size: allow-keywords;
 
             @include mixins.desktop {
                 display: grid;
                 grid-template-columns: repeat(3, auto);
-                height: auto;
-                padding: 0;
-                overflow: visible;
+                height: 340px;
             }
 
             .card-person {
@@ -559,9 +559,9 @@
                 }
 
                 .container-tes {
-
                     @include mixins.desktop {
                         display: flex;
+                        align-items: center;
                         justify-content: center;
                         gap: 50px;
                         width: 100%;
@@ -640,6 +640,14 @@
                                 color: variables.$white;
                             }
                             
+                        }
+                    }
+
+                    .tes-mob {
+                        display: none;
+
+                        @include mixins.desktop {
+                            display: flex;
                         }
                     }
                 }
@@ -950,6 +958,7 @@
     .team {
         @include mixins.desktop {
             align-items: flex-end;
+            gap: 30px;
         }
     }
 }
