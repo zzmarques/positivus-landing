@@ -14,6 +14,18 @@
     line-height: 28px;
     color: variables.$white;
 
+    transition: background-color .9s ease, color .9s ease, border-color .9s ease, transform .8s ease;
+
+    &:hover {
+        border: 1px solid variables.$dark;
+        background-color: transparent;
+        color: variables.$dark;
+    }
+
+    &:active {
+        transform: scale(.8);
+    }
+
     @include mixins.desktop {
         width: 264px;
     }
@@ -39,6 +51,11 @@
     border: 1px solid variables.$dark;
 
     color: variables.$dark;
+
+    &:hover {
+        background-color: variables.$dark;
+        color: variables.$white;
+    }
 }
 
 .btn-close {
@@ -90,7 +107,13 @@
 .btn-testimonials {
     @include mixins.center;
     cursor: pointer;
-    
+
+    transition: transform .8s ease;
+
+    &:active {
+        transform: scale(.8);
+    }
+
     span {
         transition: color .9s ease;
         color: rgba(variables.$white, 0.40);
@@ -107,6 +130,7 @@
 
 .btn-msg {
     @extend .btn-intro;
+
 }
 
 .mob {
@@ -129,6 +153,12 @@
     @extend .btn-intro;
     background-color: variables.$green;
     color: variables.$black;
+
+    &:hover {
+        border: 1px solid variables.$green;
+        background-color: transparent;
+        color: variables.$green;
+    }
 
     @include mixins.desktop {
         width: 249px;

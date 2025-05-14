@@ -83,6 +83,10 @@ header {
                 padding-block: 5px;
                 width: 100%;
 
+                &:hover {
+                    text-decoration: underline;
+                }
+
                 @include mixins.desktop {
                     height: 100%;
                     cursor: pointer;

@@ -90,6 +90,9 @@ header .navbar ul li {
   color: #000000;
   font-size: 25px;
 }
+header .navbar ul li:hover {
+  text-decoration: underline;
+}
 @media (width >= 1024px) {
   header .navbar ul li {
     height: 100%;
@@ -1659,6 +1662,15 @@ footer .footer .sec3-footer .container-direitos p, footer .footer .sec3-footer .
   font-weight: 400;
   line-height: 28px;
   color: #FFFFFF;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease, transform 0.8s ease;
+}
+.btn-intro:hover, .btn-sub:hover, .btn-msg:hover, .btn-all:hover, .btn-cta:hover, .btn-request:hover {
+  border: 1px solid #191A23;
+  background-color: transparent;
+  color: #191A23;
+}
+.btn-intro:active, .btn-sub:active, .btn-msg:active, .btn-all:active, .btn-cta:active, .btn-request:active {
+  transform: scale(0.8);
 }
 @media (width >= 1024px) {
   .btn-intro, .btn-sub, .btn-msg, .btn-all, .btn-cta, .btn-request {
@@ -1686,6 +1698,10 @@ footer .footer .sec3-footer .container-direitos p, footer .footer .sec3-footer .
   background-color: transparent;
   border: 1px solid #191A23;
   color: #191A23;
+}
+.btn-request:hover {
+  background-color: #191A23;
+  color: #FFFFFF;
 }
 
 .btn-cta {
@@ -1732,6 +1748,10 @@ footer .footer .sec3-footer .container-direitos p, footer .footer .sec3-footer .
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: transform 0.8s ease;
+}
+.btn-testimonials:active {
+  transform: scale(0.8);
 }
 .btn-testimonials span {
   transition: color 0.9s ease;
@@ -1761,6 +1781,11 @@ footer .footer .sec3-footer .container-direitos p, footer .footer .sec3-footer .
 .btn-sub {
   background-color: #B9FF66;
   color: #000000;
+}
+.btn-sub:hover {
+  border: 1px solid #B9FF66;
+  background-color: transparent;
+  color: #B9FF66;
 }
 @media (width >= 1024px) {
   .btn-sub {
