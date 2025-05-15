@@ -56,6 +56,12 @@
         background-color: variables.$dark;
         color: variables.$white;
     }
+
+    @include mixins.between-large {
+        width: 200px;
+
+        font-size: 14px
+    }
 }
 
 .btn-close {
@@ -163,6 +169,10 @@
     @include mixins.desktop {
         width: 249px;
         height: 67px
+    }
+
+    @include mixins.between-large {
+        width: 100%;
     }
 }
 

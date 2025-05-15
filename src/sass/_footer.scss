@@ -31,11 +31,16 @@ footer {
 
             @include mixins.desktop {
                 width: 100%;
+                
             }
 
             .container-sec1-footer {
                 @include mixins.c;
                 gap: 20px;
+
+                @include mixins.between-large {
+                    justify-content: space-between;
+                }
 
                 @include mixins.desktop {
                     flex-direction: row;
@@ -51,6 +56,10 @@ footer {
                         width: 180px;
                     }
 
+                    @include mixins.between-large {
+                        width: 150px;
+                    }
+
                     img {
                         width: 100%;
                         height: auto;
@@ -63,6 +72,10 @@ footer {
 
                     @include mixins.desktop {
                         width: 501px;
+                    }
+
+                    @include mixins.between-large {
+                        width: 400px;
                     }
 
                     ul {
@@ -98,6 +111,11 @@ footer {
                                     font-size: 18px;
                                     text-decoration: underline;
                                 }
+
+                                @include mixins.between-large {
+                                    font-size: 16px;
+                                }
+                                
                             }
                         }
                     }
@@ -207,6 +225,11 @@ footer {
                     padding: 58px 40px;
                 }
 
+                @include mixins.between-large {
+                    padding: 20px;
+                    width: 390px;
+                }
+
                 .form-footer {
                     display: flex;
                     flex-direction: column;
@@ -214,6 +237,10 @@ footer {
 
                     @include mixins.desktop {
                         flex-direction: row;
+                    }
+
+                    @include mixins.between-large {
+                        flex-direction: column;
                     }
 
                     .form-group {
@@ -241,6 +268,10 @@ footer {
                             @include mixins.desktop {
                                 width: 285px;
                                 height: 67px
+                            }
+
+                            @include mixins.between-large {
+                                width: 100%;
                             }
                         }
 
