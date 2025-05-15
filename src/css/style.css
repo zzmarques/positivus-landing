@@ -292,7 +292,7 @@ header .navbar ul li:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 180px;
   width: 100%;
   height: 100%;
 }
@@ -473,6 +473,7 @@ header .navbar ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
   gap: 15px;
   font-size: 20px;
   text-decoration: none;
